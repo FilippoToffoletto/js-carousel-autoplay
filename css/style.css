@@ -6,6 +6,7 @@
   
 body {
     background-color: #0a2463;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
   
 img {
@@ -15,13 +16,23 @@ img {
 .hide {
     display: none;
 }
+.main-wrapper{
+    height: 100vh;
+}
+
+h1{
+    text-align: center;
+    color: white;
+    font-size: 4rem;
+    padding-top: 30px;
+    margin-bottom: 30px;
+}
   
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 80%;
-    height: 100vh;
     margin: 0 auto;
 }
   
