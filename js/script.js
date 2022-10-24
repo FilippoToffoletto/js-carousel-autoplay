@@ -55,11 +55,26 @@ const down = document.querySelector('.btn.down');
 // do un intervallo per il cambio immagini e una variabile globale
 let changeTime = 1.7 ;
 let startInterval;
+
+// prendo il container con le immagini di sx
+const stopInterval = document.querySelector('.carousel');
   
 // loop che cambia le immagini
 startInterval = setInterval(function(){
   upDown(true);
 }, changeTime * 1000)
+
+// fermo l'intervallo con l'hover del mouse sul container
+stopInterval.addEventListener('mouseover', function(){
+    clearInterval(startInterval);
+})
+// faccio ripartire l'intervallo con l'hover del mouse sul container
+stopInterval.addEventListener('mouseout', function(){
+    startInterval = setInterval(function(){
+        upDown(true);
+      }, changeTime * 1000)  
+})
+
 
   
 down.addEventListener('click',function(){
